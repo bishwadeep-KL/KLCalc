@@ -1,11 +1,28 @@
 plugins {
+    id 'com.novoda.bintray-release'
     id 'com.android.library'
     id 'kotlin-android'
-    id 'com.github.dcendents.android-maven'
+//    id 'com.github.dcendents.android-maven'
 }
 
-group = 'kl-calc'
-version = '1.0'
+//group = 'kl-calc'
+//version = '1.0'
+
+publish {
+
+    def groupProjectID = 'com.knowledgelens.klutils'
+    def artifactProjectID = 'KLUtils'
+    def publishVersionID = '0.1.0'
+
+    userOrg = 'bishwadeep'
+    repoName = 'KLCalc'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Android library for displaying data based on JSON configuration fetched from server. With this library, you can kiss goodbye to string.xml, dimen.xml, arrays.xml. Keep all your string/integer/array config in one file. The library will automatically fetch the data from the url you provide.'
+    website = 'https://github.com/bishwadeep-KL/KLCalc'
+}
+
 
 android {
     compileSdkVersion 30
